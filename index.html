@@ -8,6 +8,12 @@
 </head>
 <body>
   <div class="weather-page">
+    <!-- Search bar -->
+    <div style="padding: 10px;">
+      <input type="text" placeholder="Search..." id="searchInput">
+      <button onclick="search()">Search</button>
+    </div>
+
     <!-- Contents from App1 -->
     <div class="Logoutstyle">
       <label class="button-style">
@@ -19,5 +25,17 @@
       </label>
     </div>
   </div>
+
+  <!-- Additional JavaScript code for search functionality -->
+  <script>
+    function search() {
+      // Add your search functionality here
+      // For example, you can retrieve the search query from the input field
+      // and perform some action based on the query
+      var searchInput = document.getElementById('searchInput').value;
+      console.log('Search query:', searchInput);
+      // Add further logic based on the search query
+    }
+  </script>
 </body>
 </html>
