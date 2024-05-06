@@ -16,7 +16,7 @@
     background-color: #d5d4d4; /* Optional: Background for the top bar */
 }
 
-.style1, .button-style {
+.button-style {
     background-color: rgb(74, 139, 219);
     color: white;
     border: none;
@@ -24,18 +24,20 @@
     cursor: pointer;
     border-radius: 5px;
     font-size: 16px;
+    flex: none; /* Do not grow or shrink */
 }
 
-.style1 {
-    background-color: rgb(64, 117, 183);
+.left {
+    margin-right: auto; /* Pushes everything else to the right */
 }
 
-.style1:hover, .button-style:hover {
-    background-color: navy;
+.right {
+    margin-left: auto; /* Pushes everything else to the left */
 }
 
 .search-bar {
     display: flex;
+    flex: 1 1 auto; /* Grow to use available space */
     justify-content: center;
     align-items: center;
 }
@@ -45,7 +47,8 @@
     border-radius: 5px;
     border: 1px solid #ccc;
     font-size: 16px;
-    margin-right: 10px; /* Space between input and search button */
+    width: 100%; /* Fill the space of its container */
+    max-width: 600px; /* Optional: max-width for larger screens */
 }
 
 .search-bar button {
@@ -56,6 +59,7 @@
     border: none;
     cursor: pointer;
     font-size: 16px;
+    margin-left: 10px;
 }
 
 .search-bar button:hover {
